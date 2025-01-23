@@ -23,44 +23,47 @@ Eve: Finally, a quiet day at the office. Maybe I'll be able to get some work don
 <<Move Adam right center 0.5>>
 <<PlayAudio music_funny 1.0 loop>>
 
-Adam: Hey Eve! I have a question!
-Eve: Oh no...
+Adam: Yo Eve, skibidi bop bop yes yes yes!  
+Eve: Blud really came in with the Ohio energy today...
 
 // horizontally flips Eve actor to face Adam
 <<Flip Eve>>
 
 // Yarn shortcut choices, an easy way to make branching options
--> Eve gets upset with Adam
+-> Eve hits him with the "Lightskin Stare"
 	<<Shake Eve 1.0>>
-	Eve: WHAT DO YOU WANT???
-	Adam: I just wanted to see if you liked using Yarn Spinner.
-	Eve: ... It's fine. Thanks. Now leave me alone.
--> Adam asks Eve a question
-	Adam: Do you think Yarn Spinner is easy to use?
-	Eve: Not when you're bothering me.
-	Adam: Oh, I didn't realize you were busy. Sorry.
+	Eve: AMBATUKAM?!?!?!?!  
+	Adam: Bro thinks he's Baby Gronk...  
+	Eve: Blud fr quirked up AND goofy ahh!  
+
+-> Adam tries to rizz her up
+	Adam: Yo Eve, are you Baby Gronk? Because you're the Rizz God’s next recruit.  
+	Eve: Not the mosquito again...  
+	Adam: Nah fr, the ocky way.  
+	Eve: Please stop.  
+	Adam: I’m literally hitting the griddy right now tho.  
 
 // hide Adam actor and remove from the scene
 <<Hide Adam>>
 // Stop all sound playback
 <<StopAudioAll>>
 
-Eve: Ok, now to finally write that visual novel.
+Eve: Anyways, time to finally work on my fanfiction crossover of Smurf Cat vs. Strawberry Elephant.  
 <<Flip Eve>>
 <<PlayAudio music_romantic>>
-Eve: I can finally write my epic romance about -
+Eve: "It was Morbin' Time, and Smurf Cat was goated with the sauce..."  
 <<StopAudioAll>>
 <<Flip Eve>>
 <<wait 1.5>>
 <<Flip Eve>>
-Eve: Wait... where's my laptop? It's not here.
+Eve: Wait... where’s my laptop? It’s gone.  
 <<Shake Eve>>
-Eve: Adam! Have you seen my laptop???
+Eve: Adam! Did you take my laptop???  
 
 <<PlayAudio music_funny>>
 <<Flip Eve>>
 <<Move Eve 1.25 center 1.0>>
-Eve: ADDDDAAAMMMMMMM!!!
+Eve: ADDDDDAAAAAAAMMMMMMM!!!  
 
 // fade to black, from 0% opacity to 100% opacity, in 2.0 seconds
 <<Fade black 0.0 1.0 2.0>>
