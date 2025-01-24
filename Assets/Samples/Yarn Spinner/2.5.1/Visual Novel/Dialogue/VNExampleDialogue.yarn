@@ -1,7 +1,7 @@
 title: Start
 tags: 
 colorID: 0
-position: 0,0
+position: 10,-47
 ---
 
 // sets background image to sprite called "bg_office"
@@ -13,11 +13,10 @@ A VISUAL NOVEL EXAMPLE
 
 // adds actor named "Eve" using sprite "cool-girl", placed in left-half + center of screen, with green text label
 <<Act Eve cool-girl left center green>>
-
-Eve: Finally, a quiet day at the office. Maybe I'll be able to get some work done.
-
 // adds actor "Adam" with sprite "biz-guy" off-screen right, with blue-ish text label
 <<Act Adam biz-guy 1.25 center #226677>>
+
+Eve: Finally, a quiet day at the office. Maybe I'll be able to get some work done.
 
 // animate Adam into new position in right-half + center, within 0.5 seconds
 <<Move Adam right center 0.5>>
@@ -31,18 +30,39 @@ Eve: Blud really came in with the Ohio energy today...
 
 // Yarn shortcut choices, an easy way to make branching options
 -> Eve hits him with the "Lightskin Stare"
-	<<Shake Eve 1.0>>
+	<<jump LightSkin>>
+-> Adam tries to rizz her up
+	<<jump Rizz>>
+
+===
+title: LightSkin
+tags: 
+colorID: 0
+position: -197,88
+---
+<<Shake Eve 1.0>>
 	Eve: AMBATUKAM?!?!?!?!  
 	Adam: Bro thinks he's Baby Gronk...  
 	Eve: Blud fr quirked up AND goofy ahh!  
-
--> Adam tries to rizz her up
-	Adam: Yo Eve, are you Baby Gronk? Because you're the Rizz God’s next recruit.  
+	<<jump End>>
+===
+title: Rizz
+tags: 
+colorID: 0
+position: 253,76
+---
+Adam: Yo Eve, are you Baby Gronk? Because you're the Rizz God’s next recruit.  
 	Eve: Not the mosquito again...  
 	Adam: Nah fr, the ocky way.  
 	Eve: Please stop.  
 	Adam: I’m literally hitting the griddy right now tho.  
-
+	<<jump End>>
+===
+title: End
+tags: 
+colorID: 0
+position: 6,249
+---
 // hide Adam actor and remove from the scene
 <<Hide Adam>>
 // Stop all sound playback
@@ -67,6 +87,5 @@ Eve: ADDDDDAAAAAAAMMMMMMM!!!
 
 // fade to black, from 0% opacity to 100% opacity, in 2.0 seconds
 <<Fade black 0.0 1.0 2.0>>
-THE END.
 
 ===

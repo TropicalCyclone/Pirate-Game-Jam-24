@@ -1,0 +1,70 @@
+title: Chapter1
+tags: 
+colorID: 0
+position: 0,0
+---
+
+// sets background image to sprite called "bg_port"
+<<Scene bg_port>>
+// start playing audioclip "ambient_sea" at 50% volume, loop forever
+<<PlayAudio ambient_sea 0.5 loop>>
+
+<<Act Commander officer left center blue>>
+Commander: A cargo ship exploded in the port this morning. The Skibidi government is on high alert, considering it an act of war. Naval ships are guarding all trade routes. 
+
+<<Act Lookout scout right center green>>
+Lookout: Commander, an undetected vessel has been spotted nearby. What should we do?
+
+-> Do nothing
+	<<jump DoNothing>>
+-> Tell the naval ships to check a different area
+	<<jump DiffArea>>
+-> Report this to the navy
+	<<jump ReportNavy>>
+
+===
+title: DoNothing
+tags: 
+colorID: 0
+position: -17,213
+---
+<<Move Lookout right center 0.5>>
+	<<PlayAudio decision_idle 1.0>>
+	Commander: We'll wait and see. No need to act rashly.
+	
+	<<Scene bg_ocean>>
+	<<PlayAudio ship_spotted 0.8>>
+	Narrator: The navy spots the ship and calls to it. The vessel safely leaves, but tension rises between the nations.
+	<<StopAudioAll>>
+	<<Fade black 0.0 1.0 2.0>>
+===
+title: DiffArea
+tags: 
+colorID: 0
+position: -237,211
+---
+<<Move Lookout right center 0.5>>
+	<<PlayAudio decision_divert 1.0>>
+	Commander: Divert the naval ships to another area. Perhaps this is just a decoy.
+	
+	<<Scene bg_ocean>>
+	<<PlayAudio ship_escape 0.8>>
+	Narrator: The naval ships patrol elsewhere, and the vessel sails freely out of Skibidi waters, undetected.
+	<<StopAudioAll>>
+	<<Fade black 0.0 1.0 2.0>>
+===
+title: ReportNavy
+tags: 
+colorID: 0
+position: 206,224
+---
+<<Move Lookout right center 0.5>>
+	<<PlayAudio decision_report 1.0>>
+	Commander: Notify the navy immediately. We can't risk any breaches in security.
+	
+	<<Scene bg_ocean>>
+	<<PlayAudio ship_attack 0.8>>
+	Narrator: The navy intercepts and destroys the ship. Later, it turns out it was a small passenger ship carrying a famous official. The repercussions are severe.
+	<<StopAudioAll>>
+	<<Fade black 0.0 1.0 2.0>>
+===
